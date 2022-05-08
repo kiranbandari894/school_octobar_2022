@@ -54,7 +54,7 @@ if(!empty($_SESSION['user_data']['email'])){
         
         <!-- Home -->
         <div class="">
-           
+             
         </div>
         <!-- Home Ends -->
 
