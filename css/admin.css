@@ -1,0 +1,19 @@
+.admission_result{
+    border-radius: 6px;
+}
+.admission_result p{
+ padding: 10px;
+ background-color: aqua;
+ color : red;
+ margin-top:10px;
+ font-weight: bold;
+ 
+}
+ 
+.loader{
+    display: none;
+    padding: 10px;
+    width:80px;
+    height: 80px;
+    margin: auto auto;
+}
