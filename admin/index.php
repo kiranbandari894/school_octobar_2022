@@ -139,7 +139,7 @@ if(!empty($_SESSION['user_data']['email'])){
     <!-- scripts -->
     <script src="../scripts/jquery.min.js"></script>
     <script src="../scripts/main.js"></script>
-
+  
 
     <script>
         $(document).ready(function(){
