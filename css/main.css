@@ -12,6 +12,7 @@
     justify-content: space-between;
     align-items: center;
     font-size : 18px;
+
     z-index: 999;
 }
 .notification{
@@ -32,6 +33,10 @@
     align-items: center;
   
 }
+.nav-list .list-item:hover a{ 
+    color: brown;
+    display: block;
+}
 .nav-list .list-item{
     display: inline-block;
     flex-grow: 1;
@@ -45,6 +50,7 @@
 
 }
 .nav-list .list-item .list-link:hover{
+    display: block;
    color: brown;
    cursor: pointer;
    background-color: bisque;
@@ -100,6 +106,10 @@
     padding: 8px;
     box-sizing: border-box;
     transition: 0.3s;
+    font-size: 16px;
+}
+.form-group select option{
+    padding: 0 10px;
 }
 .login_form{
   
@@ -127,7 +137,11 @@
     font-size: 20px;
     margin-top: 10px;
 }
+.form-group label{
+    font-size : 18px;
+    font-weight: bold;
 
+}
 .form-group input[type=text]:focus{
     border-color:dodgerblue;
     box-shadow: 0 0 8px 0 dodgerblue;
@@ -138,6 +152,10 @@
 }
 
 .form-group input[type=password]:focus{
+    border-color:dodgerblue;
+    box-shadow: 0 0 8px 0 dodgerblue;
+}
+.form-group input[type=email]:focus{
     border-color:dodgerblue;
     box-shadow: 0 0 8px 0 dodgerblue;
 }
@@ -173,14 +191,100 @@
     z-index: 100;
 }
 
-@media all and (max-width:780px){
+select#class_std{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 2px solid #aaa;
+    transition: 0.3s;
+}
+.slicknav_menu{
+    display: none;
+} 
+.sitelogo{
+    display: none;    
+}
+@media screen and (max-width:40em){
+    .nav-list,.brand-logo,.menu,.search_form{
+        display: none !important;
+    }
+    .sitelogo{
+        display: block;
+        padding: 5px;
+        padding-left: 15px;
+        position: fixed;
+        top: 0 !important;
+        z-index: 1 !important;
+    }
+    .sitelogo img{
+         top: 5px;
+         width: 45px;
+
+    }
+    .slicknav_menu{
+        display: block;
+        /* display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: left; */
+        background : rgb(48, 48, 250) !important;
+    }
+    .slicknav_nav .list-item{
+      border-bottom: 1px solid #585857;
+    }
+    .slicknav_nav .list-item:hover h3{
+        background-color: #1fdc67 !important;
+    }
+    ul{
+        margin-top: 20px !important;
+    }
+    .slicknav_nav{
+        padding-top: 10px !important;
+        display: block;
+        background: #fff;
+        padding: 4px !important;
+    }
+    .slicknav_nav h3{
+        padding: 8px !important;
+        color : red !important;
+     }
+    .slicknav_nav a{
+        color : black !important;
+        font-size: 18px;
+        font-weight: 700;
+    }
+  
+    /* .slicknav_nav a:hover{
+        background-color: #c0d838 !important;
+        padding:8px !important;
+        color : black !important;
+    } */
+    .slicknav_btn{
+        background-color: #c0d838 !important;
+    }
+    /* nav ul li:hover  ul.menu-area{
+        top:50% !important;
+    } 
+    nav ul.menu-area ul{
+        width: 100%;
+        
+        margin-bottom: 40px;
+        color: #262626;
+        
+      }
+    nav ul.menu-area{
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+    } */
     .navbar{
         display: flex;
         flex-direction: column;
+        
     }
     .nav-list{
         display: none;
         width: 100%;
+        overflow: scroll;
     }
     .nav-list .list-item{
         display: block;

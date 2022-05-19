@@ -1,6 +1,7 @@
 <?php
 include('../../constants.php');
 include_once('autoload.php');
+// echo json_encode($_POST);
 $insert_obj = new connect(HOST_NAME,USER_NAME,PASSWORD,DB_NAME);
 $connect = $insert_obj->connect();
 // admission start

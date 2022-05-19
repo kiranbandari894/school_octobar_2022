@@ -32,6 +32,7 @@ if(isset($_POST['submit'])){
     <title>School</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/slicknav.css">
 </head>
 <body>
     <!-- Navbar Start -->
@@ -106,15 +107,17 @@ if(isset($_POST['submit'])){
 
     <!-- scripts -->
     <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery.slicknav.js"></script>
     <script src="scripts/main.js"></script>
-
+    
 
     <script>
         $(document).ready(function(){
             // hamburger menu toggle
-           $(".menu").click(function(){
-               $(".nav-list").slideToggle("slow");
-           });
+        //    $(".menu").click(function(){
+        //        $(".nav-list").slideToggle("slow");
+        //    });
+        $('.nav-list').slicknav();
         });
     </script>
     <!-- scripts end -->

@@ -41,7 +41,7 @@ public function check_user_exist($table=null,$input_data=null,$connection=null){
 //   insert data
   public function insert_data($table,array $form_data,$connection){
       $this->con = $connection;
-      $form_data['admission_no'] = "ADM".$form_data['aadhar'].date('dmY');
+      $form_data['admission_no'] = "ADM".substr($form_data['aadhar'],7,12).date('dmY');
      
       $this->table = $table;
       $this->user_input = $form_data['aadhar'];
