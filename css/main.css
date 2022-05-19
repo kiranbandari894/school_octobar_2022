@@ -204,7 +204,11 @@ select#class_std{
 .sitelogo{
     display: none;    
 }
+img.brand-logo-img {width: 45px !important;}
 @media screen and (max-width:40em){
+    img.brand-logo-img {
+       visibility: hidden;
+    }
     .nav-list,.brand-logo,.menu,.search_form{
         display: none !important;
     }
@@ -218,9 +222,10 @@ select#class_std{
     }
     .sitelogo img{
          top: 5px;
-         width: 45px;
+         width: 45px !important;
 
     }
+    
     .slicknav_menu{
         display: block;
         /* display: flex !important;
@@ -314,5 +319,16 @@ select#class_std{
      
      }
 
-   
+     .manageclass-container{
+        top :0;
+        display: flex;
+        justify-content: center;
+          background-color: #c0d838;
+    }
+    button#add_cls:hover{
+        background: #2ff22f;
+        color: white;
+    }
+     
+
 }

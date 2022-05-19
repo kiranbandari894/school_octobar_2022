@@ -29,7 +29,7 @@ if(!empty($_SESSION['user_data']['email'])){
     <!-- Navbar Start -->
     <nav class="navbar">
         <div class="brand-logo">
-           Logo
+         <img class="brand-logo-img" src="../img/logo.png" alt="">
         </div>
         <ul class="nav-list" id="menu-list-items">
             <li class="list-item"><a href="?home" class="list-link"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
@@ -45,7 +45,7 @@ if(!empty($_SESSION['user_data']['email'])){
                      <li><a href="?admission"><i class="fa-solid fa-chalkboard-user"></i> Admission</a></li>
                      <li><a href=""><i class="fa-solid fa-magnifying-glass"></i> Student Details</a></li>
                      <li><a href=""><i class="fa-solid fa-users"></i> Staff Management</a></li>
-                     <li><a href=""><i class="fa-solid fa-circle-nodes"></i> Manage Classes</a></li>
+                     <li><a href="?add_removeClasses"><i class="fa-solid fa-circle-nodes"></i> Manage Classes</a></li>
                      <li><a href=""><i class="fa-brands fa-gg-circle"></i> Manage Roles</a></li>
                   </ul>
                   <ul>
@@ -149,7 +149,7 @@ if(!empty($_SESSION['user_data']['email'])){
                   </div>
                   <div class="form-group">
                      <label for="">Email</label>
-                     <input class="form-control" type="email" name="email" required>
+                     <input class="form-control" placeholder="example@domain.com" type="email" name="email" required>
                   </div>
                   <div class="form-group">
                      <label for="">Class</label>
@@ -166,8 +166,15 @@ if(!empty($_SESSION['user_data']['email'])){
                       </select>
                   </div>
                   <div class="form-group">
+                     <label for="">Section</label>
+                     <select name="std" id="class_std">
+                        <option value="">-Select Class-</option>
+                        
+                      </select>
+                  </div>
+                  <div class="form-group">
                      <label for="">Roll no</label>
-                     <input class="form-control" type="email" name="email" required>
+                     <input class="form-control" placeholder="Enter : 365" type="number" name="rollno" required>
                   </div>
                   <div class="form-group">
                      <label for="">Profile Image</label>
@@ -192,12 +199,37 @@ if(!empty($_SESSION['user_data']['email'])){
               </form>
           </div>
           <?php  }
+           
+         //   Adding and removing classes
+            if(isset($_GET['add_removeClasses'])){
+               ?>
+               
+               <ul class="manageclass-container">
+                  
+                <li class="manageclass-items item-1">
+                    <button class="add_cls" id="add_cls" >Add</button>
+                </li>
+                <li class="manageclass-items item-1">
+                      <button class="remove" id="remove">Remove</button>
+                </li>
+                   
+               </ul>
+
+              <?php
+            }
+         // Adding and removing classes Ends
+           
+         //   Logout start
               if(isset($_GET['logout'])){
                unset($_SESSION);
                session_destroy();
                header("Location:../");
             }
+            // Logout Ends
           ?>
+
+
+  
         <!-- Admission Form Ends -->
 
        
