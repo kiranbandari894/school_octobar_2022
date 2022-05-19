@@ -125,3 +125,50 @@ nav ul.menu-area ul li a{
 .search_form:hover{
   background-color: transparent !important;
 }
+.manageclass-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    /* background-color: #c0d838; */
+    padding: 10px;
+    
+}
+.manageclass-items{
+   list-style-type: none;
+
+}
+.manageclass-items button{
+    display: flex;
+    justify-content: center;
+    outline: 3px solid #7b38d8;
+    /* border: 1px solid #164c82; */
+    padding: 15px;
+    margin-right: 15px;
+    width: 100px;
+    height: 40px ;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 6px;
+    
+ }
+ button#add_cls {
+    background: #5bdc5b;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: white;
+}
+button#remove {
+    background: #f52f2f;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: white;
+}
+button#add_cls:hover{
+    background: #2ff22f;
+    color: white;
+}
+button#remove:hover{
+    background:rgb(237, 55, 55);
+    color: white;
+
+}
+ 
