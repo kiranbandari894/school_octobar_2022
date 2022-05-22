@@ -1,6 +1,7 @@
 <?php
 include('../../constants.php');
 include_once('autoload.php');
+// echo json_encode($_POST);
 $insert_obj = new connect(HOST_NAME,USER_NAME,PASSWORD,DB_NAME);
 $connect = $insert_obj->connect();
 // admission start
@@ -21,7 +22,12 @@ if($insert_obj->insert_data("admission",$data,$connect) == "success"){
     $file_name = $directory.$image_name;
 
     move_uploaded_file($img_tmp_name,$file_name);
-    $insert_obj->compress_img($file_name,500,$connect);
+    try{
+      $insert_obj->compress_img($file_name,500,$connect);
+    }catch(Exception $er){
+       echo "Allowed Only jpg or jpeg...... ";
+    }
+    
    }
    echo "Admission has successfully created.";
 }elseif($insert_obj->insert_data("admission",$data,$connect) == "false"){
