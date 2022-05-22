@@ -191,12 +191,17 @@
     z-index: 100;
 }
 
-select#class_std{
+select#class_std,select#class_std_section{
     padding: 10px;
     font-size: 16px;
     border-radius: 4px;
     border: 2px solid #aaa;
     transition: 0.3s;
+}
+ 
+select#class_std option:hover{
+    display: block;
+    background-color: #1fdc67 !important;
 }
 .slicknav_menu{
     display: none;
@@ -216,7 +221,7 @@ img.brand-logo-img {width: 45px !important;}
         display: block;
         padding: 5px;
         padding-left: 15px;
-        position: fixed;
+ 
         top: 0 !important;
         z-index: 1 !important;
     }
@@ -228,6 +233,7 @@ img.brand-logo-img {width: 45px !important;}
     
     .slicknav_menu{
         display: block;
+        position:sticky;
         /* display: flex !important;
         flex-wrap: wrap !important;
         align-items: left; */
@@ -256,6 +262,10 @@ img.brand-logo-img {width: 45px !important;}
         color : black !important;
         font-size: 18px;
         font-weight: 700;
+    }
+    .AM-container{
+        display: flex;
+        flex-flow: column wrap;
     }
   
     /* .slicknav_nav a:hover{
@@ -323,7 +333,8 @@ img.brand-logo-img {width: 45px !important;}
         top :0;
         display: flex;
         justify-content: center;
-          background-color: #c0d838;
+        align-items: center;
+        background-color: #c0d838;
     }
     button#add_cls:hover{
         background: #2ff22f;
