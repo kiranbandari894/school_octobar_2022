@@ -64,7 +64,7 @@ if(isset($_POST['submit'])){
         </div>
         <!-- Notifications End -->
 
-
+        <h1>Kiran Kumar</h1>
         <!-- Slider -->
           <!-- <div class="slider-outer">
           <i class="fa-solid fa-circle-chevron-left prev"></i>
